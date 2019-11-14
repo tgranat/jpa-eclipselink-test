@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/com/oracle/ojdbc7/12.1.0.1/ojdbc7-12.1.0.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/eclipselink/2.7.5/eclipselink-2.7.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/jakarta.persistence/2.2.3/jakarta.persistence-2.2.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/commonj.sdo/2.1.1/commonj.sdo-2.1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/javax.persistence/2.2.1/javax.persistence-2.2.1.jar"/>
+</classpath>
