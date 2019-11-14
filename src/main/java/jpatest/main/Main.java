@@ -17,6 +17,7 @@ public class Main {
         factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         EntityManager em = factory.createEntityManager();
         // read the existing entries and write to console
+        // (Note: remember JPQL queries differs from SQL)
         Query q = em.createQuery("select t from Todo t");
         @SuppressWarnings("unchecked")
         List<Todo> todoList = q.getResultList();
