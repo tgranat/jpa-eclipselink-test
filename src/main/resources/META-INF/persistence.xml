@@ -1,25 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<persistence
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
 	<persistence-unit name="todos"
 		transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<!-- One or more classes. Or use <jar-file> -->
 		<class>jpatest.model.Todo</class>
 		<properties>
+			<!-- Database connection  -->
 			<property name="javax.persistence.jdbc.driver"
 				value="oracle.jdbc.driver.OracleDriver" />
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:oracle:thin:@localhost:1521:XE" />
-			<property name="javax.persistence.jdbc.user" value="CHANGE_THIS_USER" />
+			<property name="javax.persistence.jdbc.user" value="CHANGE_THIS" />
 			<property name="javax.persistence.jdbc.password"
-				value="CHANGE_THIS_USER" />
+				value="CHANGE_THIS" />
+				
+			
 
 			<!-- EclipseLink should create the database schema automatically -->
 			<property name="eclipselink.ddl-generation"
 				value="create-tables" />
-			<!-- To see the SQL generated for the databases set eclipselink.ddl-generation.output-mode
-			value from "database" to "sql-script" or "both". Two files will get generated 
-			'createDDL.jdbc' and 'dropDDL.jdbc'  -->
+			<!-- To see the SQL generated for the databases set eclipselink.ddl-generation.output-mode 
+				value from "database" to "sql-script" or "both". Two files will get generated 
+				'createDDL.jdbc' and 'dropDDL.jdbc' -->
 			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
 		</properties>
